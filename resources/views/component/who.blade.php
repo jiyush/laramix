@@ -1,5 +1,5 @@
 @if(Auth::guard('web')->check())
-	<p class="text-success" style="color: green;">
+	<p class="text-success">
 		Your are Login As <strong>USER</strong>
 	</p>
 @else
@@ -9,7 +9,7 @@
 @endif
 
 @if(Auth::guard('admin')->check())
-	<p class="text-success" style="color: green;">
+	<p class="text-success">
 		Your are Login As <strong>ADMIN</strong>
 	</p>
 @else

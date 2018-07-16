@@ -28,7 +28,8 @@ Route::get('/', function () {
 /**
  * Route for testing
  **/
-Route::get('/test', function () {
+Route::get('/test/{lang?}', function ($lang = null) {
+	App::setlocale($lang);
 	return view('navbar');
 })->name('test');
 /*
