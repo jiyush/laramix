@@ -13,7 +13,7 @@ class AdminLoginController extends Controller
      */
     public function __construct()
     {
-    	$this->middleware('guest:admin');
+    	$this->middleware('guest:admin', ['except' => ['logout']]);
     }
 
     /**
@@ -46,5 +46,14 @@ class AdminLoginController extends Controller
     	return redirect()->back()->withInput($request->only('email','remember'));
     }
 
+    /**
+     * Logout Function for Admin
+     *   
+     */
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect('/');
+    }
 
 }
