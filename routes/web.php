@@ -11,6 +11,15 @@
 |
 */
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('admin')->group(function (){
+	Route::get('/login', 'AdminLoginController@showLoginForm')->name('admin.login');
+	Route::post('/login', 'AdminLoginController@login')->name('admin.login.submit');
+	Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -30,3 +39,9 @@ Route::get('/product',function () {
 			'quantity' => 4
 		]);
 })->name('product');
+
+Route::get('/get/{id}',function(App\Product $id){
+
+	return $id->desc;
+
+});	

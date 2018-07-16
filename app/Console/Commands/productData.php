@@ -12,7 +12,7 @@ class productData extends Command
      *
      * @var string
      */
-    protected $signature = 'add:product {name} {desc} {quantity}';
+    protected $signature = 'add:product';
     /**
      * The console command description.
      *

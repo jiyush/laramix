@@ -43,11 +43,12 @@
 </nav>
 <center>
 	<button onclick="return laramix()" class="btn btn-primary center-block" style="margin-top: 200px;">Click Here</button>
+  <a href="http://localhost/laramix/public/get/2" class="btn btn-primary">get Implicite Data</a>
 </center>
 <script type="text/javascript" src="./js/jquery.js"></script>
-<script type="text/javascript" src="./js/bootstrap.js"></script>
 <script type="text/javascript" src="./js/manifest.js"></script>
 <script type="text/javascript" src="./js/vendor.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
 <script type="text/javascript" src="./js/all.js"></script>
 
 </body>
